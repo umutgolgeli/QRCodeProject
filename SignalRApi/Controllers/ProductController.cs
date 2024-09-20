@@ -44,7 +44,7 @@ namespace SignalRApi.Controllers
                 ProductName = y.ProductName,
                 ProductStatus = y.ProductStatus,
             });
-            return Ok(values.ToList());
+            return Ok(values.ToList()); 
             
         }
         [HttpPost]
