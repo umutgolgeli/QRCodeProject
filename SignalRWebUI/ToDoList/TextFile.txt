@@ -1,0 +1,23 @@
+﻿--CategoryCount
+--ProductCount
+--ActiveCategoryCount
+--PassiveCategoryCount
+
+--ProductCountByCategoryNameHamgurger
+--ProductCountByCategoryNameDrink
+
+--Ortalama Fiyat
+--En Yüksek Fiyatlı Ürün
+--En Düşük Fiyatlı Ürün
+--Ortalama Hamburger Fiyatı
+
+--Toplam Sipariş Sayısı
+--Aktif Sipariş Sayısı
+--Son Sipariş Tutarı
+--Kasadaki Tutar
+--Bugünkü Kazanç
+--Masa Sayısı
+
+---------------------------------------------
+
+--İstatistiklerin Consume Edilmesi
