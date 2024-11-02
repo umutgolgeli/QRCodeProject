@@ -1,4 +1,4 @@
-﻿using SignallR.BusinessLayer.Abstract;
+﻿ using SignallR.BusinessLayer.Abstract;
 using SignalR.DataAccessLayer.Abstract;
 using SignalR.EntityLayer.Entities;
 using System;
@@ -20,23 +20,23 @@ namespace SignallR.BusinessLayer.Concrete
 
 		public void TAdd(MenuTable entity)
 		{
-			throw new NotImplementedException();
-		}
+			_menuTableDal.Add(entity);
+        }
 
 		public void TDelete(MenuTable entity)
 		{
-			throw new NotImplementedException();
-		}
+			_menuTableDal.Delete(entity);
+        }
 
 		public MenuTable TGetByID(int id)
 		{
-			throw new NotImplementedException();
+			return _menuTableDal.GetByID(id);
 		}
 
 		public List<MenuTable> TGetListAll()
 		{
-			throw new NotImplementedException();
-		}
+			return _menuTableDal.GetListAll();
+        }
 
 		public int TMenuTableCount()
 		{
@@ -45,7 +45,8 @@ namespace SignallR.BusinessLayer.Concrete
 
 		public void TUpdate(MenuTable entity)
 		{
-			throw new NotImplementedException();
-		}
+			_menuTableDal.Update(entity);
+
+        }
 	}
 }
