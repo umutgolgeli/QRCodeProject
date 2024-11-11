@@ -98,10 +98,11 @@ namespace SignalRWebUI.Controllers
 			return View();
 		}
 		[HttpPost]
-		public async Task<IActionResult> UpdateProduct(UpdateProductDto updateCategoryDto)
+		public async Task<IActionResult> UpdateProduct(UpdateProductDto updateProductDto)
 		{
+			updateProductDto.ProductStatus = true;
 			var client = _httpClientFactory.CreateClient();
-			var jsonData = JsonConvert.SerializeObject(updateCategoryDto);
+			var jsonData = JsonConvert.SerializeObject(updateProductDto);
 			StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
 			var responseMessage = await client.PutAsync("https://localhost:7037/api/Product/", stringContent);
 			if (responseMessage.IsSuccessStatusCode)

@@ -23,7 +23,17 @@ namespace SignallR.BusinessLayer.Concrete
             _notificationDal.Add(entity);   
         }
 
-        public void TDelete(Notification entity)
+		public void TChangeStatustoFalse(int id)
+		{
+			_notificationDal.ChangeStatustoFalse(id);
+		}
+
+		public void TChangeStatustoTrue(int id)
+		{
+			_notificationDal.ChangeStatustoTrue(id);
+		}
+
+		public void TDelete(Notification entity)
         {
            _notificationDal.Delete(entity); 
         }

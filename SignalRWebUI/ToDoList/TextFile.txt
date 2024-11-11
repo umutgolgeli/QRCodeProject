@@ -1,23 +1,9 @@
-﻿--CategoryCount
---ProductCount
---ActiveCategoryCount
---PassiveCategoryCount
-
---ProductCountByCategoryNameHamgurger
---ProductCountByCategoryNameDrink
-
---Ortalama Fiyat
---En Yüksek Fiyatlı Ürün
---En Düşük Fiyatlı Ürün
---Ortalama Hamburger Fiyatı
-
---Toplam Sipariş Sayısı
---Aktif Sipariş Sayısı
---Son Sipariş Tutarı
---Kasadaki Tutar
---Bugünkü Kazanç
---Masa Sayısı
-
----------------------------------------------
-
---İstatistiklerin Consume Edilmesi
+﻿--ProgressBar İstatistik
+--Order Sayfası UI
+--QR Kod Sistemi
+--Default Kontrol
+--Menü Sayfası Kontrol UI
+--LogOut
+--Ayarlar
+--Uygulama Seviyesinde Authorize
+--Mail?

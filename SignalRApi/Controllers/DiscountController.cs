@@ -36,6 +36,8 @@ namespace SignalRApi.Controllers
                 Description = createDiscountDto.Description,
                 ImageUrl = createDiscountDto.ImageUrl,
                 Title = createDiscountDto.Title,
+                Status = false 
+
 
             });
             return Ok("İndirim  Bilgisi Eklendi");
@@ -68,8 +70,21 @@ namespace SignalRApi.Controllers
                 Description = updateDiscountDto.Description,
                 ImageUrl = updateDiscountDto.ImageUrl,
                 Title = updateDiscountDto.Title,
-            });
+				Status = false
+			});
             return Ok("İndirim Bilgisi Güncellendi");
         }
-    }
+        [HttpGet("ChangeStatustoTrue/{id}")]
+        public IActionResult ChangeStatustoTrue(int id) {
+			_discountService.TChangeStatustoTrue(id);
+			return Ok("İndirimli ürün Aktif Hale Geldi");
+		}
+		[HttpGet("ChangeStatustoFalse/{id}")]
+		public IActionResult ChangeStatustoFalse(int id)
+		{
+			_discountService.TChangeStatustoFalse(id);
+			return Ok("İndirimli ürün Pasif Hale Geldi");
+		}
+	}
 }
+ 

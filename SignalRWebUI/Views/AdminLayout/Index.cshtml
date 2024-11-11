@@ -1,6 +1,8 @@
 ﻿
 @{
     Layout = null;
+	var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+	var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
 }
 
 <!DOCTYPE html>
@@ -12,9 +14,11 @@
 		@await Component.InvokeAsync("_LayoutSidebarComponentPartial")
 		
 		<div class="main-panel">
-			@RenderBody() 
+			@RenderBody()
+			@if (!(currentController == "ProgressBars" && currentAction == "Index"))
+			{
 			@await Component.InvokeAsync("_LayoutFooterComponentPartial")
-			
+			}
 		</div>
 	</div>
 	
